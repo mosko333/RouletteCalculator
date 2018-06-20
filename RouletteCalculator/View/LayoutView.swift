@@ -24,84 +24,25 @@ class LayoutView: UIView {
     }
     
     // MARK: - Properties
-    let chipLeftSixLine: UIButton = {
-        let button = UIButton(type: .system)
-        button.contentMode = .scaleAspectFill
-        button.setImage(#imageLiteral(resourceName: "xcaChip").withRenderingMode(UIImageRenderingMode.alwaysOriginal), for: .normal)
-        return button
-    }()
+    let topBlockView: UIView = {
+        let view = UIView()
+        view.backgroundColor 
+    }
     
-    let chipMidStreet: UIButton = {
-        let button = UIButton(type: .system)
-        button.contentMode = .scaleAspectFill
-        button.setImage(#imageLiteral(resourceName: "xcaChip").withRenderingMode(UIImageRenderingMode.alwaysOriginal), for: .normal)
-        return button
-    }()
-    
-    let chipRightSixLine: UIButton = {
-        let button = UIButton(type: .system)
-        button.contentMode = .scaleAspectFill
-        button.setImage(#imageLiteral(resourceName: "xcaChip").withRenderingMode(UIImageRenderingMode.alwaysOriginal), for: .normal)
-        return button
-    }()
-    
-    let chipTopLeftCorner: UIButton = {
-        let button = UIButton(type: .system)
-        button.contentMode = .scaleAspectFill
-        button.setImage(#imageLiteral(resourceName: "xcaChip").withRenderingMode(UIImageRenderingMode.alwaysOriginal), for: .normal)
-        return button
-    }()
-    
-    let chipTopRightCorner: UIButton = {
-        let button = UIButton(type: .system)
-        button.contentMode = .scaleAspectFill
-        button.setImage(#imageLiteral(resourceName: "xcaChip").withRenderingMode(UIImageRenderingMode.alwaysOriginal), for: .normal)
-        return button
-    }()
-    
-    let chipBottomLeftCorner: UIButton = {
-        let button = UIButton(type: .system)
-        button.contentMode = .scaleAspectFill
-        button.setImage(#imageLiteral(resourceName: "xcaChip").withRenderingMode(UIImageRenderingMode.alwaysOriginal), for: .normal)
-        return button
-    }()
-    
-    let chipBottomRightCorner: UIButton = {
-        let button = UIButton(type: .system)
-        button.contentMode = .scaleAspectFill
-        button.setImage(#imageLiteral(resourceName: "xcaChip").withRenderingMode(UIImageRenderingMode.alwaysOriginal), for: .normal)
-        return button
-    }()
-    
-    let chipTopSplit: UIButton = {
-        let button = UIButton(type: .system)
-        button.contentMode = .scaleAspectFill
-        button.setImage(#imageLiteral(resourceName: "xcaChip").withRenderingMode(UIImageRenderingMode.alwaysOriginal), for: .normal)
-        return button
-    }()
-    
-    let chipRightSplit: UIButton = {
-        let button = UIButton(type: .system)
-        button.contentMode = .scaleAspectFill
-        button.setImage(#imageLiteral(resourceName: "xcaChip").withRenderingMode(UIImageRenderingMode.alwaysOriginal), for: .normal)
-        return button
-    }()
-    
-    let chipLeftSplit: UIButton = {
-        let button = UIButton(type: .system)
-        button.contentMode = .scaleAspectFill
-        button.setImage(#imageLiteral(resourceName: "xcaChip").withRenderingMode(UIImageRenderingMode.alwaysOriginal), for: .normal)
-        return button
-    }()
-    
-    let chipBottomSplit: UIButton = {
-        let button = UIButton(type: .system)
-        button.contentMode = .scaleAspectFill
-        button.setImage(#imageLiteral(resourceName: "xcaChip").withRenderingMode(UIImageRenderingMode.alwaysOriginal), for: .normal)
-        return button
-    }()
-    
+    let chipLeftSixLine: UIButton = ChipButton(type: .system)
+    let chipMidStreet: UIButton = ChipButton(type: .system)
+    let chipRightSixLine: UIButton = ChipButton(type: .system)
+    let chipTopLeftCorner: UIButton = ChipButton(type: .system)
+    let chipTopRightCorner: UIButton = ChipButton(type: .system)
+    let chipBottomLeftCorner: UIButton = ChipButton(type: .system)
+    let chipBottomRightCorner: UIButton = ChipButton(type: .system)
+    let chipTopSplit: UIButton = ChipButton(type: .system)
+    let chipRightSplit: UIButton = ChipButton(type: .system)
+    let chipLeftSplit: UIButton = ChipButton(type: .system)
+    let chipBottomSplit: UIButton = ChipButton(type: .system)
     let chipStrightUp: UIButton = ChipButton(type: .system)
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -176,37 +117,3 @@ class LayoutView: UIView {
     
 }
 
-class ChipButton: UIButton {
-    
-    // MARK: - Properties
-    let createNewAccLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "test"
-        label.numberOfLines = 1
-        label.textAlignment = .center
-        return label
-    }()
-    
-    // MARK: - Inits
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-    
-    
-    func setup() {
-        self.contentMode = .scaleAspectFill
-        self.setImage(#imageLiteral(resourceName: "xcaChip").withRenderingMode(UIImageRenderingMode.alwaysOriginal), for: .normal)
-    }
-    
-}

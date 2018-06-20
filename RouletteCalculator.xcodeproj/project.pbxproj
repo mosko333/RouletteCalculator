@@ -13,6 +13,7 @@
 		7EC8B1A020D9B6E70005E80B /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC8B19F20D9B6E70005E80B /* LayoutViewController.swift */; };
 		7EC8B1A320D9B7B20005E80B /* Extention+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC8B1A220D9B7B20005E80B /* Extention+UIView.swift */; };
 		7EC8B1A520D9C2FA0005E80B /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC8B1A420D9C2FA0005E80B /* LayoutView.swift */; };
+		7ECE6DAF20DAC74E0093A989 /* ChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE6DAE20DAC74E0093A989 /* ChipButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7EC8B19F20D9B6E70005E80B /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
 		7EC8B1A220D9B7B20005E80B /* Extention+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention+UIView.swift"; sourceTree = "<group>"; };
 		7EC8B1A420D9C2FA0005E80B /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
+		7ECE6DAE20DAC74E0093A989 /* ChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				7EC8B1A420D9C2FA0005E80B /* LayoutView.swift */,
+				7ECE6DAE20DAC74E0093A989 /* ChipButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			files = (
 				7EC8B1A520D9C2FA0005E80B /* LayoutView.swift in Sources */,
 				7EC8B1A020D9B6E70005E80B /* LayoutViewController.swift in Sources */,
+				7ECE6DAF20DAC74E0093A989 /* ChipButton.swift in Sources */,
 				7EC8B18820D9B5320005E80B /* AppDelegate.swift in Sources */,
 				7EC8B1A320D9B7B20005E80B /* Extention+UIView.swift in Sources */,
 			);
