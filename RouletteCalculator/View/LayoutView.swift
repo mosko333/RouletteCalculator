@@ -13,6 +13,9 @@ class LayoutView: UIView {
     
     // MARK: - Contsraint Constants
     struct Constants {
+        static let backgroundColorRed: UIColor = UIColor(named: "xcaBackgroundColorRed")!
+        static let blockBackgroundTopViewHeight: CGFloat = 124
+        static let blockBackgroundBottomViewHeight: CGFloat = 116
         static let chipHeightAndWidth: CGFloat = 83
         static let chipYOuterLineSpacing: CGFloat = 84
         static let chipXLeftLineSpacing: CGFloat = 73
@@ -26,8 +29,12 @@ class LayoutView: UIView {
     // MARK: - Properties
     let topBlockView: UIView = {
         let view = UIView()
-        view.backgroundColor 
-    }
+        view.backgroundColor = Constants.backgroundColorRed
+        return view
+    }()
+    
+    let bottomBlockView: UIView = BottomBackgroundView()
+
     
     let chipLeftSixLine: UIButton = ChipButton(type: .system)
     let chipMidStreet: UIButton = ChipButton(type: .system)
@@ -47,7 +54,6 @@ class LayoutView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "xcaLayout"))
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -56,6 +62,12 @@ class LayoutView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        addSubview(topBlockView)
+        topBlockView.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: Constants.blockBackgroundTopViewHeight)
+        
+        addSubview(bottomBlockView)
+        bottomBlockView.anchor(top: nil, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: Constants.blockBackgroundBottomViewHeight)
         
         //        addSubview(chipLeftSixLine)
         //        chipLeftSixLine.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, paddingTop: Constants.chipYOuterLineSpacing, paddingLeft: Constants.chipXLeftLineSpacing, paddingRight: 0, paddingBottom: 0, width: Constants.chipHeightAndWidth, height: Constants.chipHeightAndWidth)

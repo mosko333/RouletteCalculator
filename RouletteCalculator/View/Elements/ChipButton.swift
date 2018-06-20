@@ -45,7 +45,6 @@ class ChipButton: UIButton {
         addSubview(count)
         count.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         count.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        //count.anchor(top: self.centerYAnchor, left: self.centerXAnchor, bottom: nil, right: nil, paddingTop: 1, paddingLeft: 1, paddingRight: 0, paddingBottom: 0, width: 0, height: 0)
     }
     
     
