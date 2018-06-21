@@ -16,6 +16,8 @@
 		7ECE6DAF20DAC74E0093A989 /* ChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE6DAE20DAC74E0093A989 /* ChipButton.swift */; };
 		7ECE6DB220DAD1CA0093A989 /* BottomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE6DB120DAD1CA0093A989 /* BottomBackgroundView.swift */; };
 		7ECE6DB420DB059F0093A989 /* WinningNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE6DB320DB059F0093A989 /* WinningNumber.swift */; };
+		7ECE6DB620DB156F0093A989 /* WinningNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE6DB520DB156F0093A989 /* WinningNumberController.swift */; };
+		7ECE6DB920DB40DC0093A989 /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE6DB820DB40DC0093A989 /* EdgeInsetLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		7ECE6DAE20DAC74E0093A989 /* ChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipButton.swift; sourceTree = "<group>"; };
 		7ECE6DB120DAD1CA0093A989 /* BottomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBackgroundView.swift; sourceTree = "<group>"; };
 		7ECE6DB320DB059F0093A989 /* WinningNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningNumber.swift; sourceTree = "<group>"; };
+		7ECE6DB520DB156F0093A989 /* WinningNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningNumberController.swift; sourceTree = "<group>"; };
+		7ECE6DB820DB40DC0093A989 /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		7EC8B19A20D9B55A0005E80B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7ECE6DB720DB40B20093A989 /* Helper */,
 				7EC8B1A120D9B77D0005E80B /* Extention */,
 				7EC8B19920D9B54C0005E80B /* Storyboard */,
 				7EC8B18720D9B5320005E80B /* AppDelegate.swift */,
@@ -111,7 +116,7 @@
 		7EC8B19D20D9B5750005E80B /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
-				7ECE6DB320DB059F0093A989 /* WinningNumber.swift */,
+				7ECE6DB520DB156F0093A989 /* WinningNumberController.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 		7EC8B19E20D9B5810005E80B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7ECE6DB320DB059F0093A989 /* WinningNumber.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +144,14 @@
 				7ECE6DB120DAD1CA0093A989 /* BottomBackgroundView.swift */,
 			);
 			path = Elements;
+			sourceTree = "<group>";
+		};
+		7ECE6DB720DB40B20093A989 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7ECE6DB820DB40DC0093A989 /* EdgeInsetLabel.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECE6DB920DB40DC0093A989 /* EdgeInsetLabel.swift in Sources */,
 				7ECE6DB420DB059F0093A989 /* WinningNumber.swift in Sources */,
 				7EC8B1A520D9C2FA0005E80B /* LayoutView.swift in Sources */,
 				7EC8B1A020D9B6E70005E80B /* LayoutViewController.swift in Sources */,
@@ -217,6 +232,7 @@
 				7ECE6DAF20DAC74E0093A989 /* ChipButton.swift in Sources */,
 				7EC8B18820D9B5320005E80B /* AppDelegate.swift in Sources */,
 				7EC8B1A320D9B7B20005E80B /* Extention+UIView.swift in Sources */,
+				7ECE6DB620DB156F0093A989 /* WinningNumberController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

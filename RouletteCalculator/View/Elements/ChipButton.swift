@@ -18,6 +18,7 @@ class ChipButton: UIButton {
     // MARK: - Properties
     static var countNumber: Int = 0
     
+    
     let count: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

@@ -12,10 +12,18 @@ class LayoutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view = LayoutView()
+        let layoutView = LayoutView()
+        layoutView.delegate = self
+        self.view = layoutView
     }
     
+    //chipLeftSixLine.addTarget(self, action: #selector(twentyPercentButtonTapped), for: .touchUpInside)
     
+    @objc func twentyPercentButtonTapped() {
+        
+    }
+}
 
-
+extension LayoutViewController: LayoutViewDelegate {
+    
 }

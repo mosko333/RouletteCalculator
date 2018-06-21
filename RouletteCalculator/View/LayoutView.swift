@@ -9,6 +9,10 @@
 import UIKit
 
 
+protocol LayoutViewDelegate: class {
+    //func buttonTapped(at: Position)
+}
+
 class LayoutView: UIView {
     
     // MARK: - Contsraint Constants
@@ -26,6 +30,8 @@ class LayoutView: UIView {
         static let ovalYCenterMidSpacing: CGFloat = 368
     }
     
+
+    
     // MARK: - Properties
     let topBlockView: UIView = {
         let view = UIView()
@@ -34,6 +40,7 @@ class LayoutView: UIView {
     }()
     
     let bottomBlockView: UIView = BottomBackgroundView()
+    weak var delegate: LayoutViewDelegate?
 
     
     let chipLeftSixLine: UIButton = ChipButton(type: .system)
@@ -53,7 +60,13 @@ class LayoutView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        chipStrightUp.addTarget(self, action: #selector(doSomething), for: .touchUpInside)
         backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "xcaLayout"))
+    }
+    
+    @objc func doSomething(sender: UIButton!) {
+        guard let button = sender as? ChipButton else { return }
+//        delegate?.buttonTapped(at: button.position)
     }
     
     required init?(coder aDecoder: NSCoder) {
