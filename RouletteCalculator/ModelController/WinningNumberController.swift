@@ -9,18 +9,22 @@
 import Foundation
 
 class WinningNumberController {
-    
+
     static let shared = WinningNumberController()
     var winningNumber = WinningNumber()
 
-    
-    
-    func addChip(position : Position) {
+    func addChip(position: Position) {
         guard var value = winningNumber.numberOfChipsAtPosition[position] else { return }
         value += 1
         winningNumber.numberOfChipsAtPosition[position] = value
     }
     
+    func removeChip(position: Position) {
+        guard var value = winningNumber.numberOfChipsAtPosition[position] else { return }
+        value -= 1
+        winningNumber.numberOfChipsAtPosition[position] = value
+    }
+
     func getTotal() -> Int {
         var totalPayout = 0
         for (position, numberOfChips) in winningNumber.numberOfChipsAtPosition {
